@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {
   BrowserRouter,
   Route,
@@ -7,17 +7,22 @@ import {
 
 // App Components
 import Header from './Header';
-import Home from './Home';
+import Stock from './Stock';
 
-const App = () => (
-  <BrowserRouter>
-    <div className="container">
-      <Header />
-      <Switch>
-        <Route exact path="/" component={Home} />
-      </Switch>
-    </div>
-  </BrowserRouter>
-);
+class App extends Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <div className="container">
+          <Header />
+          <Switch>
+            <Route path="/:id" component={Stock} />
+          </Switch>
+        </div>
+      </BrowserRouter>
+    );
+  }
+}
+
 
 export default App;
