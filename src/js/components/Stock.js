@@ -22,6 +22,24 @@ class Stock extends Component {
       }
     };
   }
+  
+  // Not quite the same
+  // Will probably require three separate layouts inside the container
+
+  // On success
+  // // this.setState({
+  //   stock: data for stock initial page (financial basic)
+  //   about: data for the stock about
+  //   financial: data for the stock financial
+  //   team: data for the stock team
+  // });
+
+  // In StockSubHeader do something like:
+  // Pass in the relevant data to a Stock container
+  // <Route exact path={ `${match.path}` } render={ () => <Redirect to={ `${match.url}/html` } /> } />
+  // <Route path={ `${match.path}/html` } render={ () => <CourseContainer data={HTMLCourses} /> } />
+  // <Route path={ `${match.path}/css` } render={ () => <CourseContainer data={CSSCourses} /> } />
+  // <Route path={ `${match.path}/javascript` } render={ () => <CourseContainer data={JSCourses} /> } />
 
   getShare() {
     $.ajax({
@@ -30,7 +48,9 @@ class Stock extends Component {
       dataType: 'json',
       cache: false,
       success: (stock) => {
-        this.setState({ stock: stock.stock_info });
+        this.setState({
+          stock: stock.stock_info
+        });
       },
       error: (xhr, status, err) => {
         console.log(err);

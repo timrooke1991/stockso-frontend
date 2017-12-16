@@ -8,6 +8,7 @@ import {
 // App Components
 import Header from './Header';
 import Stock from './Stock';
+import NotFound from './NotFound';
 
 class App extends Component {
   render() {
@@ -17,6 +18,7 @@ class App extends Component {
           <Header />
           <Switch>
             <Route path="/:id" component={Stock} />
+            <Route component={ NotFound } />
           </Switch>
         </div>
       </BrowserRouter>
