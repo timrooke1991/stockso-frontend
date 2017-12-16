@@ -3,33 +3,29 @@ import $ from 'jquery';
 
 class Stock extends Component {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      stock: {}
+      stock: {
+        name: ''
+      }
     };
   }
 
   componentDidMount() {
-    $.ajax({
-      method: 'POST',
-      url: `http://localhost:3000/api/stocks/LSE`,
-      dataType: 'json',
-      cache: false,
-      success: (data) => {
-        console.log(data);
-        this.setState({ stock: data });
-      },
-      error: (xhr, status, err) => {
-        console.log(err);
-      }
-    });
+    this.getShare();
+  }
+
+  componentWillReceiveProps(newProps) {
+    this.props = newProps;
+    this.getShare();
   }
 
   render() {
     return (
       <div className="main-content home">
         <h2>Stock Name: {this.state.stock.name}</h2>
+        <pre>{JSON.stringify(this.state)}</pre>
       </div>
     );
   }

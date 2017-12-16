@@ -6,10 +6,10 @@ const Header = () => (
   <header>
     <span className="icn-logo"><i className="material-icons">code</i></span>
     <ul className="main-nav">
-      <li><NavLink exact to="/LSE">LSE</NavLink></li>
+      <li><NavLink to="/LSE">LSE</NavLink></li>
       <li><NavLink to="/PAYS">PAYS</NavLink></li>
-      <li><NavLink to="/teachers">Teachers</NavLink></li>
-      <li><NavLink to="/courses">Courses</NavLink></li>
+      <li><NavLink to="/ARS">ARS</NavLink></li>
+      <li><NavLink to="/BOOM">BOOM</NavLink></li>
     </ul>
   </header>
 );
