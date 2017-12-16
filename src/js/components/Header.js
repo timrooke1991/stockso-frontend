@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 //
 const Header = () => (
   <header>
-    <span className="icn-logo"><i className="material-icons">code</i></span>
+    <span className="icn-logo"><i className="material-icons"></i>LOGO</span>
     <ul className="main-nav">
       <li><NavLink to="/LSE">LSE</NavLink></li>
       <li><NavLink to="/PAYS">PAYS</NavLink></li>
