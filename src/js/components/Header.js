@@ -8,7 +8,6 @@ const Header = () => (
     <ul className="main-nav">
       <li><NavLink to="/LSE">LSE</NavLink></li>
       <li><NavLink to="/PAYS">PAYS</NavLink></li>
-      <li><NavLink to="/ARS">ARS</NavLink></li>
       <li><NavLink to="/BOOM">BOOM</NavLink></li>
     </ul>
   </header>
