@@ -22,7 +22,7 @@ class Stock extends Component {
       }
     };
   }
-  
+
   // Not quite the same
   // Will probably require three separate layouts inside the container
 
@@ -72,10 +72,12 @@ class Stock extends Component {
       <div className="main-content home">
         <StockSubHeader props={this.props} />
         <h2>Stock Name: {this.state.stock.name}</h2>
-        <p>URL: {this.state.stock.summary[0].url}</p>
-        <p>Phone: {this.state.stock.summary[0].phone}</p>
-        <p>Address: {this.state.stock.summary[0].address}</p>
-        <p>{this.state.stock.summary[0].overview}</p>
+        <div>
+          <p>URL: {this.state.stock.summary[0].url}</p>
+          <p>Phone: {this.state.stock.summary[0].phone}</p>
+          <p>Address: {this.state.stock.summary[0].address}</p>
+          <p>{this.state.stock.summary[0].overview}</p>
+        </div>
       </div>
     );
   }

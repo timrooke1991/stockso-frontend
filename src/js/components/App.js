@@ -17,7 +17,7 @@ class App extends Component {
         <div className="container">
           <Header />
           <Switch>
-            <Route path="/:id" component={Stock} />
+            <Route path="/:id" component={Stock}></Route>
             <Route component={ NotFound } />
           </Switch>
         </div>
